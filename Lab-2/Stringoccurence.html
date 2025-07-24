@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>'a' Positions & Substring</title>
+</head>
+<body>
+  <script>
+    word = prompt("Enter a word with at least two 'a's:");
+
+    firstPos = word.indexOf("a");
+    lastPos = word.lastIndexOf("a");
+    between = word.substring(firstPos + 1, lastPos);
+
+    document.write("First 'a' at position: " + (firstPos + 1) + "<br>");
+    document.write("Last 'a' at position: " + (lastPos + 1) + "<br>");
+    document.write("String between: " + between);
+  </script>
+</body>

@@ -1,0 +1,26 @@
+<!-- Write a JavaScript to take 2-digit number and then separate these 2 digits, then multiply
+ƒrst digit by itself for second digit times -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    n = parseInt(prompt("Enter the 2 digit number:"))
+    if(n<10 || n>99) {
+      document.write("Plese enter valid number")
+    }
+    firstnum = parseInt(n/10)
+    secondnum = parseInt(n%10)
+    res = 1
+    // for(i=1;i<=secondnum;i++) {
+    //   res*=firstnum;
+    // }
+    res = Math.pow(firstnum,secondnum)
+    document.write("result=" + res)
+  </script>
+</body>
+</html>
