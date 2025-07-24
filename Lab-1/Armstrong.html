@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    n = parseInt(prompt("Enter a Number"))
+    digit = n.toString().length
+    num=n
+    res=0
+    while(num!=0) {
+      rem = num%10;
+      res = res + Math.pow(temp,digit)
+      // res = res + rem*rem*rem;
+      num = parseInt(num/10)
+    }
+    if(res==n) {
+      document.write("Armstrong Number")
+    }
+    else {
+      document.write("Not Armstrong Number")
+    }
+  </script>
+</body>
+</html>
