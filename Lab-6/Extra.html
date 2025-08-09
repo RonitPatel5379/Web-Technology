@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label>Name</label>
+  <input type="text" name="" id="username1">
+  <input type="text" name="" id="username">
+  <button id="btn" onclick="addName()">Add</button><br><br>
+  <table border="2">
+    <thead>
+      <th>id</th>
+      <th>Name</th>
+      <th>Sem</th>
+      <th>Actions</th>
+    </thead>
+    <tbody id="tblbody">
+
+    </tbody>
+  </table>
+  <script>
+    a = []
+    editindex = -1
+    function addName() {
+      uname = document.getElementById('username').value
+      if(editindex!=-1) {
+        a[editindex] = uname
+        editindex = -1
+        btn.innerHTML = "Add"
+        display()
+      }
+      else {
+        if(uname =='') {
+        alert("Please enter the name")
+      }
+        else {
+        a.push(uname)
+        display()
+        }
+      }
+      uname.value
+    }
+    function deleteName(idx) {
+      a.splice(idx,1)
+      display()
+    }
+    function editName(idx) {
+      // username.value = idx
+      editindex = idx
+      username.value = a[idx]
+      btn.innerHTML = "Edit"
+    }
+    function display() {
+      temp = ''
+      for(i=0;i<a.length;i++) {
+        temp += `<tr>
+               <td>${i+1}</td>
+               <td>${a[i].name}</td>
+               <td>${a[i].sem}</td>
+               <th><button onclick='editName(${i})'>Edit</button><button onclick='deleteName(${i})'>Delete</button></th>
+               </tr>`
+      }
+      tblbody.innerHTML = temp
+    }
+  </script>
+  <!-- <script>
+    a = [1,2,3,4,5]
+    document.write(a + "<br>")
+    a[2] = 7
+    document.write(a + "<br>")
+    a.splice(1,1)
+    document.write(a)
+  </script> -->
+</body>
+</html>

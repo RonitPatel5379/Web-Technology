@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="pressed"></h1>
+    <script>
+      // h1Ref = document.getElementById("pressed");
+      // document.addEventListener("keyup",(e)=>{
+      //   h1Ref.innerHTML = "" + e.key;
+      // });
+      // h1Ref = document.getElementById("pressed");
+      // document.addEventListener("keypress",(e)=>{
+      //   h1Ref.innerHTML = "" + e.key;
+      // });
+      h1Ref = document.getElementById("pressed");
+      document.addEventListener("keydown",(e)=>{
+        h1Ref.innerHTML = "" + e.key;
+      });
+    </script>
+  </body>
+</html>

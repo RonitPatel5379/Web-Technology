@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form style="line-height: 40px;" onsubmit="validateForm()">
+    <label>Username:</label><input type="text" id="username" /><br>
+    <span id="errtext"></span>
+    <label>Password:</label><input type="password" id="password" /><br>
+    <span id="errpass"></span>
+    <label>Repeat Password:</label><input type="password" id="repeatPassword" /><br>
+    <label>Date of Birth:</label><input type="date" id="dob" /><br>
+    <label>Enrollment Number:</label><input type="text" id="enrollment" /><br>
+    <label>Email:</label><input type="text" id="email" />
+    <button type="submit">Submit</button>
+    <div id="error" class="error"></div>
+  </form>
+  <script>
+    username = document.getElementById('username').value
+    username.addEventListener("blur",()=>{
+      if(username.value.length <= 8) 
+      errtext.innerHTML = "username must be contains 8 chracters"
+      errtext.style.color = "red"
+      username.style.border = "1px solid red"
+    })
+  </script>
+</body>
+</html>
